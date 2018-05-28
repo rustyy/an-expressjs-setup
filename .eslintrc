@@ -1,0 +1,40 @@
+{
+  // We extend the "eslint:recommended" style guide with the "google" style guide to get a strict
+  // style guide to allow less possible errors.
+  "extends": [
+      "eslint:recommended",
+      "google"
+  ],
+
+  // An environment defines global variables that are predefined.
+  "env": {
+      "es6": true,     // enable all ECMAScript 6 features except for modules (this automatically sets the ecmaVersion parser option to 6)
+      "mocha": true,   // adds all of the Mocha testing global variables
+      "node": true     // Node.js global variables and Node.js scoping.
+  },
+
+  // The no-undef rule will warn on variables that are accessed but not defined within the same
+  // file. If you are using global variables inside of a file then it’s worthwhile to define
+  // those globals so that ESLint will not warn about their usage.
+  "globals": {
+  },
+
+  // ESLint allows you to specify the JavaScript language options you want to support.
+  "parserOptions": {
+    "ecmaVersion": 8
+  },
+
+  // Add or overwrite eslint rules. A rule could be "off", "warn" or "error".
+  "rules": {
+      // DISABLE RULES
+      // These are the rules we WANT to turn off to fit our code style.
+      // --------------------------------------------------------------------
+      "max-len": "warn",      // enforce a maximum line length
+      "no-console": "off",    // disallow the use of console
+
+      // ADDITIONAL RULES
+      // --------------------------------------------------------------------
+      //"indent": ["error", 4],  // enforce consistent indentation
+      "arrow-spacing": "error" // enforce space around "=>"
+  }
+}
