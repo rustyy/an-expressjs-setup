@@ -1,11 +1,12 @@
+const bodyParser = require('body-parser');
 const express = require('express');
-const path = require('path');
 const server = express();
+const router = require('./router');
 
+const PORT = 3000;
+
+server.use(bodyParser.json());
 server.use(express.static('public'));
+server.use('/', router);
 
-server.get('/', (req, res) => {
-  res.sendfile(path.join(`${__dirname}/public/index.html`));
-});
-
-server.listen(3000);
+server.listen(PORT, () => console.log(`listen on ${PORT}`));
