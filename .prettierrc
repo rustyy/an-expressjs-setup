@@ -1,7 +1,8 @@
 {
-  "printWidth": 100,
-  "parser": "babylon",
+  "printWidth": 120,
   "singleQuote": true,
-  "trailingComma": "all",
-  "arrowParens": "always"
+  "useTabs": false,
+  "tabWidth": 2,
+  "semi": true,
+  "bracketSpacing": true
 }
